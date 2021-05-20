@@ -6,4 +6,19 @@
 
 body{
     font-family: 'Roboto Mono', monospace;
+    background-color: #182d3d;
+}
+
+/*utilities*/
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #132431;
+}
+
+header img{
+    width: 60px;
 }
