@@ -2,7 +2,7 @@
 
 //var_dump(__DIR__ . '/../../milestone2/database.php');
 
-include __DIR__ . '/../../milestone2/database.php'
+include __DIR__ . '/../doubledata.php'
 
 ?>
 
@@ -17,13 +17,13 @@ include __DIR__ . '/../../milestone2/database.php'
 
                         <li><img src="<?php echo $value['poster'] ?>" alt="poster logo"></li>
 
-                        <li><h3><?php echo $value['title'] ?></h3></li>
+                        <li><h4><?php echo $value['title'] ?></h4></li>
 
-                        <li><h5><?php echo $value['author'] ?></h5></li>
+                        <li><h6><?php echo $value['author'] ?></h6></li>
 
-                        <li> <h4><?php echo $value['year'] ?> </h4></li>
+                        <li> <h5><?php echo $value['year'] ?> </h5></li>
                         
-                        <li><h5><?php echo $value['genre'] ?></h5></li>
+                        <li><h6><?php echo $value['genre'] ?></h6></li>
                                 
                             
                     </ul>

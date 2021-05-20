@@ -7,7 +7,7 @@
     <title>Php Dischi milestone 1</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">

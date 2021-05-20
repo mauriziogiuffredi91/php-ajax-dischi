@@ -15,13 +15,14 @@ body{
     margin: 0 auto;
 }
 
-h3,
 h4,
-h5{
+h5,
+h6{
     color: whitesmoke;
 }
 header{
     background-color: #132431;
+    padding: 15px 0;
 }
 
 header img{
@@ -33,22 +34,31 @@ header img{
 main .container{
     display: flex;
     flex-wrap: wrap;
+    padding: 90px 0;
+    
     
 }
+
+
 main li{
     list-style: none;
     text-align: center;
 }
 main li img{
-    width: 162px;
+    width: 162px; 
 }
 
 main .box-dischi{
     background-color: #000000;
-    flex-basis: calc(100%/3);
+    flex-basis: calc(100%/4);
+    margin: 32px;
+    padding: 30px 12px;
+    
 
 }
 
-
-    
-    
+main li h4,
+main li h5,
+main li h6{
+    margin: 10px 0;
+}
