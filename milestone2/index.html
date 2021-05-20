@@ -38,19 +38,22 @@
                 <div class="container">
                     
                     
-                    <div class="box-dischi">
+                    <div class="box-dischi"
+                        v-for="items in album" 
+                    
+                    >
                         <ul>
                         
     
-                            <li><img src="" alt="poster logo"></li>
+                            <li><img :src="items.poster" alt="poster logo"></li>
     
-                            <li><h4></h4></li>
+                            <li><h4>{{items.title}}</h4></li>
     
-                            <li><h6></h6></li>
+                            <li><h6>{{items.author}}</h6></li>
     
-                            <li> <h5> </h5></li>
+                            <li> <h5> {{items.year}}</h5></li>
                             
-                            <li><h6></h6></li>
+                            <li><h6>{{items.genre}}</h6></li>
                                     
                                 
                         </ul>
