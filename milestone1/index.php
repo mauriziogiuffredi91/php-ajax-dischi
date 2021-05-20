@@ -22,7 +22,9 @@
     include './templates/header.php'; ?>
 
     <?php //main
-    include './templates/main.php'; ?>
+    include './templates/main.php';?>
+
+    
     
 </body>
 </html>

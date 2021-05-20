@@ -30,3 +30,25 @@ header img{
 
 /* main */
 
+main .container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+main li{
+    list-style: none;
+    text-align: center;
+}
+main li img{
+    width: 162px;
+}
+
+main .box-dischi{
+    background-color: #000000;
+    flex-basis: calc(100%/3);
+
+}
+
+
+    
+    
