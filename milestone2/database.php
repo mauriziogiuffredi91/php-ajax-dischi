@@ -58,18 +58,18 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
     
     
     $query = (!empty($_GET['author'])) ? $_GET['author'] : 'all';
-    $albums = [];
+    $artisti = [];
 
     //var_dump($query);
     if($query !== 'all'){
         
         foreach ($database as $album) {
             if (strpos($album['author'], $query) !== false) {
-                $albums[] = $album['author'];
+                $artisti[] = $album['author'];
             }
         }
     }else{
-        $albums = $database;
+        $artisti = $database;
     }
 
    
@@ -78,6 +78,6 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
 
     header('Content-type: application/json');
 
-    echo json_encode($albums);
+    echo json_encode($artisti);
 
 ?>

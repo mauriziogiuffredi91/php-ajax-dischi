@@ -4,6 +4,7 @@ const app = new Vue({
     el: '#app',
     data: {
         album: [],
+        artisti:[],
 
     },
     created() {
