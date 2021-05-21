@@ -57,47 +57,51 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
     //var_dump($_GET);
     
     $author = [];
-
-    //controllo sulla ripetizione
-    foreach ($database as $artist) {
-
-        if (!in_array($artist['author'], $author)) {
-            
-            $author[] = $artist['author'];
-        }
-    }
-
-    $query = $_GET['author'];
+    $query = (empty($_GET['author'])) ? $database : $_GET['author'];
+    
 
     var_dump($query);
+    //controllo sulla ripetizione
+    // foreach ($database as $artist) {
 
-    $filtrato = [];
+    //     if (!in_array($artist['author'], $author)) {
+            
+    //         $author[] = $artist['author'];
+    //     }
+    // }
+
+    // 
+
+    // var_dump($query);
+
+    // $filtrato = [];
 
     
 
-    if ($query !== '') {
+    // if ($query !== '') {
 
-        foreach ($author as $name) {
-            if (strpos($name, $query ) !==false ) {
-               foreach ($database as $value) {
-                   if ($value['author'] === $name) {
-                       $filtrato[] = $name;
+    //     foreach ($author as $name) {
+    //         if (strpos($name, $query ) !==false ) {
+    //            foreach ($database as $value) {
+    //                if ($value['author'] === $name) {
+    //                    $filtrato[] = $name;
                        
-                    }else {
-                        $filtrato = $database;
-                    }
+    //                 }
                    
-                }
-            }
-        }
+    //             }
+    //         }else{
+                
+    //         }
+        
+    //     }
         
         
-    }else{
-        $filtrato = $database;
-    }
+    // }else{
+    //     $filtrato[] = $database;
+    // }
 
     
-    var_dump($filtrato);
+    // var_dump($filtrato);
         
         
     //var_dump($author);
