@@ -56,11 +56,21 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
 
     //var_dump($_GET);
     
-    $author = [];
-    $query = (empty($_GET['author'])) ? $database : $_GET['author'];
+    $author = $database;
+    $query = (!empty($_GET)) ? $_GET['author'] : $author;
     
 
-    var_dump($query);
+    //var_dump($query);
+    if(!empty($query)){
+        $author = [];
+        foreach ($database as $artist) {
+            if (strpos($artist['author'], $query) !== false) {
+                $author[] = $artist['author'];
+            }
+        }
+    }
+
+    //var_dump($author);
     //controllo sulla ripetizione
     // foreach ($database as $artist) {
 
@@ -108,8 +118,8 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
 
     
 
-    //header('Content-type: application/json');
+    header('Content-type: application/json');
 
-    //echo json_encode($database);
+    echo json_encode($author);
 
 ?>
