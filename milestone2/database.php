@@ -72,51 +72,7 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
         $albums = $database;
     }
 
-    //var_dump($author);
-    //controllo sulla ripetizione
-    // foreach ($database as $artist) {
-
-    //     if (!in_array($artist['author'], $author)) {
-            
-    //         $author[] = $artist['author'];
-    //     }
-    // }
-
-    // 
-
-    // var_dump($query);
-
-    // $filtrato = [];
-
-    
-
-    // if ($query !== '') {
-
-    //     foreach ($author as $name) {
-    //         if (strpos($name, $query ) !==false ) {
-    //            foreach ($database as $value) {
-    //                if ($value['author'] === $name) {
-    //                    $filtrato[] = $name;
-                       
-    //                 }
-                   
-    //             }
-    //         }else{
-                
-    //         }
-        
-    //     }
-        
-        
-    // }else{
-    //     $filtrato[] = $database;
-    // }
-
-    
-    // var_dump($filtrato);
-        
-        
-    //var_dump($author);
+   
 
     
 
