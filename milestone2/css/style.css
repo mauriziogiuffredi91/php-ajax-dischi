@@ -23,8 +23,18 @@ h6{
 header{
     background-color: #132431;
     padding: 15px 0;
+
 }
 
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header select{
+    width: 100px;
+
+}
 header img{
     width: 60px;
 }
