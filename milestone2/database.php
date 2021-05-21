@@ -58,10 +58,13 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
     
     $author = [];
 
+    //controllo sulla ripetizione
     foreach ($database as $artist) {
 
-        
-        $author += $artist['author'];
+        if (!in_array($artist['author'], $author)) {
+            
+            $author[] = $artist['author'];
+        }
     }
 
     
