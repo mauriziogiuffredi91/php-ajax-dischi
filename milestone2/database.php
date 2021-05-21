@@ -67,11 +67,31 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
         }
     }
 
+    $query = $_GET['author'];
+
+    var_dump($query);
+
+    $filtrato = [];
+
     
 
+    if ($query !== '') {
+
+        foreach ($author as $name) {
+            if ($name = $query) {
+               
+                $filtrato[] = $name;
+            }
+        }
         
         
-    var_dump($author);
+    }
+
+    
+    var_dump($filtrato);
+        
+        
+    //var_dump($author);
 
     
 
