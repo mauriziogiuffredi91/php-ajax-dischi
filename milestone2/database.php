@@ -78,13 +78,22 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
     if ($query !== '') {
 
         foreach ($author as $name) {
-            if ($name = $query) {
-               
-                $filtrato[] = $name;
+            if (strpos($name, $query ) !==false ) {
+               foreach ($database as $value) {
+                   if ($value['author'] === $name) {
+                       $filtrato[] = $name;
+                       
+                    }else {
+                        $filtrato = $database;
+                    }
+                   
+                }
             }
         }
         
         
+    }else{
+        $filtrato = $database;
     }
 
     
@@ -95,8 +104,8 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
 
     
 
-    // header('Content-type: application/json');
+    //header('Content-type: application/json');
 
-    // echo json_encode($database);
+    //echo json_encode($database);
 
 ?>
