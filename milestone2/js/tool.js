@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         album: [],
         artisti:[],
+        value: 'all',
 
     },
     created() {
@@ -27,6 +28,10 @@ const app = new Vue({
             .catch(err =>{
                 console.log(err, 'Error');
             })
+        },
+        return(){
+            console.log('ritorno');
         }
+
     }
 });
