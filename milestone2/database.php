@@ -57,20 +57,50 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
     //var_dump($_GET);
     
     
-    $query = (!empty($_GET['author'])) ? $_GET['author'] : 'all';
-    $artisti = [];
+    // $query = (!empty($_GET['author'])) ? $_GET['author'] : 'all';
+    // $artisti = [];
 
-    //var_dump($query);
-    if($query !== 'all'){
+    // //var_dump($query);
+    // if($query !== 'all'){
         
+    //     foreach ($database as $album) {
+    //         if (strpos($album['author'], $query) !== false) {
+    //             $artisti[] = $album['author'];
+    //         }
+    //     }
+    // }else{
+    //     $artisti = $database;
+    // }
+
+    $artist = empty($_GET['artist']) ? false : $_GET['artist'];
+
+    //per avere gli album
+    $albums = [];
+
+    if ($artist == false || $artist == 'all') {
+        $albums = $database;
+    } else {
         foreach ($database as $album) {
-            if (strpos($album['author'], $query) !== false) {
-                $artisti[] = $album['author'];
+            if($album['author'] == $artist){
+                $albums[] = $album;
             }
         }
-    }else{
-        $artisti = $database;
     }
+
+    //per ciclare nel database
+    $artists = [];
+    foreach ($database as $album) {
+        if(! in_array($album['author'], $artists)){
+            $artists[] = $album['author'];
+        }
+    }
+
+    //risultato
+
+    $results = [
+        'albums' => $albums,
+        'artists' => $artists
+    ];
 
    
 
@@ -78,6 +108,6 @@ require_once __DIR__ . '/../milestone1/doubledata.php';
 
     header('Content-type: application/json');
 
-    echo json_encode($artisti);
+    echo json_encode($results);
 
 ?>
