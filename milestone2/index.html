@@ -33,7 +33,7 @@
 
                 <div class="selettore">
 
-                    <select  v-model="filterArtist">
+                    <select @change="getFiltered" v-model="filterArtist">
                         
                         <option value="all"
                             

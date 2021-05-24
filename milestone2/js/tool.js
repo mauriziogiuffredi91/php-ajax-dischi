@@ -25,7 +25,30 @@ const app = new Vue({
                 console.log(err);
             });
         
-    },    
+    },  
+    methods: {
+        getFiltered(){
+            axios
+            //qui non funziona semplicemente mettere this.apiURL
+            //la const non è globale
+            .get( window.location.href + 'database.php',{
+                params:{
+                    artist: this.filterArtist,
+                }
+            })
+
+
+            .then(res => {
+                this.albums = res.data.albums;
+                
+            })
+                
+            .catch(err =>{
+                console.log(err);
+            });
+        
+        }
+    }  
     //     this.getData(apiURL);
             
 
