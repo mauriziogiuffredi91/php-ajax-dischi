@@ -33,27 +33,26 @@
 
                 <div class="selettore">
 
-                    <select name="select" 
-                        id="select-artist"
-                        v-model="selected"
-                        @mode="selezione"
+                    <select  v-model="filterArtist">
                         
-
-                        
-                        
-                    >
-
                         <option value="all"
                             
                         >ALL</option>
 
-                        <option value="autori"
-                            v-for="items in album"
+                        <option v-for="artist in artists" :value="artist">
+                    
+                            {{artist}}
                         
-                        
-                        >{{items.author}}</option>
+                        </option>
 
                     </select>
+                        
+                        
+
+                        
+                        
+                    
+
 
                     
 
@@ -70,7 +69,7 @@
                     
                     
                     <div class="box-dischi"
-                        v-for="items in album" 
+                        v-for="items in albums" 
                     
                     >
                         <ul>
